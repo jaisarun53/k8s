@@ -81,5 +81,5 @@ In Kubernetes, Pods are dynamic and ephemeral. **Services** provide the essentia
 
 
 ---
-**Full Documentation:** [Detailed Services Guide](./k8s-services-detailed.md)
+**Full Documentation:** [Detailed Services Guide](./k8s_Services.md)
 
