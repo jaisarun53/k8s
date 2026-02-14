@@ -54,3 +54,32 @@ This session breaks down the complex "brain and muscle" relationship of a Kubern
 
 ---
 **Detailed Documentation:** [k8s-architecture.md](./k8s-architecture.md)
+
+# 🌐 Kubernetes Services: Networking Summary
+
+In Kubernetes, Pods are dynamic and ephemeral. **Services** provide the essential networking layer that allows these pods to communicate reliably by providing a stable IP address and DNS name.
+
+### 🔑 Key Concepts
+* **Stability:** Services provide a persistent "front-end" IP that doesn't change when pods are recreated.
+* **Load Balancing:** Automatically distributes traffic across all healthy pod replicas matching a selector.
+* **Service Discovery:** Allows pods to find each other using standard DNS names instead of volatile IP addresses.
+
+### 🚦 Service Types at a Glance
+| Type | Visibility | Use Case |
+| :--- | :--- | :--- |
+| **ClusterIP** | Internal Only | Default. Inter-service communication (e.g., App to DB). |
+| **Headless** | Internal Only | For StatefulSets (Databases) requiring direct Pod-to-Pod sync. |
+| **NodePort** | External (Node IP) | Testing/Dev. Exposes a port (30000-32767) on every node. |
+| **LoadBalancer** | External (Public IP)| Production. Native integration with Cloud provider LBs. |
+
+### 🛠️ The "Glue": Selectors & Ports
+* **Selectors:** The mechanism that links a Service to a Pod via labels.
+* **Port:** The port exposed on the Service IP.
+* **TargetPort:** The port the application listens on inside the container.
+* **Endpoints:** The dynamic list of healthy pod IPs currently serving traffic.
+
+
+
+---
+**Full Documentation:** [Detailed Services Guide](./k8s-services-detailed.md)
+
