@@ -33,3 +33,24 @@ This session moves from high-level architecture to the specific objects you will
 
 ---
 **Detailed Documentation:** [k8s-components.md](./k8s-components.md)
+
+### 🧠 Kubernetes Architecture: Behind the Scenes
+
+This session breaks down the complex "brain and muscle" relationship of a Kubernetes cluster. Understanding these internal processes is key to troubleshooting why a pod isn't scheduling or how self-healing works.
+
+**Key Learning Objectives:**
+* **The Master Node (Control Plane):**
+    * **API Server:** The gateway for all commands and security gatekeeper.
+    * **Scheduler:** The intelligent decision-maker for resource allocation.
+    * **Controller Manager:** The watchman that ensures the "actual state" matches the "desired state."
+    * **etcd:** The cluster's source of truth; a key-value store of every configuration and status.
+* **The Worker Node (Data Plane):**
+    * **Kubelet:** The agent that takes orders from the Master to run containers.
+    * **Kube-Proxy:** The networking genius that routes traffic efficiently across the cluster.
+    * **Container Runtime:** The engine (like Docker) that actually executes the code.
+* **High Availability (HA):** Why production environments use multiple master nodes to prevent a "single point of failure."
+
+
+
+---
+**Detailed Documentation:** [k8s-architecture.md](./k8s-architecture.md)
