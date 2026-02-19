@@ -118,6 +118,6 @@ This section summarizes the core concepts of Kubernetes YAML configuration based
 
 ---
 *Note: YAML is indentation-sensitive. Always validate your syntax before applying.*
-**Detailed Documentation:** [k8s-benefits.md](./k8s-benefits.md)
+**Detailed Documentation:** [k8s-benefits.md](./k8s_yaml_file.md)
 
 
