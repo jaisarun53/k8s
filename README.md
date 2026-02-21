@@ -158,5 +158,24 @@ Beyond just running containers, Kubernetes is a robust orchestration engine buil
 
 **Detailed Documentation:** [k8s-mongo-deployment-guide.md](./k8s_yaml_file.md)
 
+## ☸️ Kubernetes Namespaces: Core Concepts
+
+A **Namespace** is a virtual cluster within a physical Kubernetes cluster, used to logically isolate and organize resources.
+
+### 🚀 Key Takeaways
+* **Isolation:** Provides a boundary for naming, access control (RBAC), and resource usage.
+* **Default Namespaces:** `default`, `kube-system` (infrastructure), `kube-public`, and `kube-node-lease`.
+* **Resource Quotas:** Allows setting CPU/RAM limits per namespace to prevent resource exhaustion.
+* **DNS Resolution:** Services can communicate across namespaces using `[service-name].[namespace-name]`.
+* **Best Practice:** Use namespaces to separate environments (Dev/Staging/Prod) and teams.
+
+### 🛠️ Quick Commands
+```bash
+kubectl get ns                     # List all namespaces
+kubectl create ns <name>           # Create a new namespace
+kubectl config set-context --current --namespace=<name> # Switch context
+```
+
+**Detailed Documentation:** [k8s-mongo-deployment-guide.md](./k8s_namespace.md)
 
 
